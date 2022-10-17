@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The filter() Method</h2>
+
+<p>Get every element in the array that has a value of 18 or more:</p>
+
+<p id="demo"></p>
+<h2>The map() Method</h2>
+<p>map function</p>
+<p id="demo1"></p>
+<h2>The reduce() Method</h2>
+<p>Subtract the numbers in the array, starting from the left:</p>
+<p id="demo2"></p>
+
+<script>
+const ages = [32, 33, 16, 40];
+
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+const numbers = [4, 9, 16, 25];
+document.getElementById("demo1").innerHTML = numbers.map(Math.sqrt);
+const num = [175, 50, 25];
+document.getElementById("demo2").innerHTML = num.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+</script>
+
+</body>
+</html>
